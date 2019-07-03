@@ -1,0 +1,26 @@
+﻿@model List<MobyWord>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table id="tblWords" class="display" style="width:50%">
+    <thead>
+        <tr>
+
+            <th>Kelime</th>
+            <th>Sayı</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Word</td>
+                <td>@item.Count</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
